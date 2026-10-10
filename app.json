@@ -1,0 +1,94 @@
+{
+  "name": "FitnessPro",
+  "displayName": "FitnessPro",
+  "expo": {
+    "name": "FitnessPro",
+    "slug": "FitnessPro",
+    "scheme": "com.devamitch.fitnessproapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/images/app-icon-all.png",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "newArchEnabled": false,
+    "jsEngine": "hermes",
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "icon": "./assets/images/app-icon-android-legacy.png",
+      "package": "com.devamitch.fitnessproapp",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/app-icon-android-adaptive-foreground.png",
+        "backgroundImage": "./assets/images/app-icon-android-adaptive-background.png"
+      },
+      "allowBackup": false
+    },
+    "ios": {
+      "icon": "./assets/images/app-icon-ios.png",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.devamitch.fitnessproapp",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to analyze your exercise form and provide real-time feedback.",
+        "NSMicrophoneUsageDescription": "This app uses the microphone to record voice commands for hands-free control during workouts.",
+        "NSPhotoLibraryUsageDescription": "This app uses your photo library to let you customize your profile and share your achievements.",
+        "NSMotionUsageDescription": "This app uses motion data to track your workouts and provide accurate metrics.",
+        "NSHealthShareUsageDescription": "This app uses health data to provide personalized workout recommendations and track your progress.",
+        "NSHealthUpdateUsageDescription": "This app saves workout data to Health to keep all your fitness information in one place."
+      },
+      "appleTeamId": "J885D3G52A"
+    },
+    "web": {
+      "favicon": "./assets/images/app-icon-web-favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-localization",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/app-icon-android-adaptive-foreground.png",
+          "imageWidth": 300,
+          "resizeMode": "contain",
+          "backgroundColor": "#191015"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      "expo-apple-authentication",
+      "expo-secure-store",
+      "expo-notifications"
+    ],
+    "experiments": {
+      "tsconfigPaths": true
+    }
+  },
+  "ignite": {
+    "version": "10.2.0"
+  }
+}
